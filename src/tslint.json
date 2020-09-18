@@ -1,0 +1,9 @@
+{
+  "extends": "tslint:recommended",
+  "rules": {
+    "no-conditional-assignment": true,
+    "semicolon": true,
+    "quotemark": true,
+    "no-duplicate-imports": true
+  }
+}

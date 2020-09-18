@@ -1,0 +1,13 @@
+{
+  "name":"Michael Baird's Blog",
+  "short_name": "Michael Baird",
+  "description": "Hi, I'm Michael Baird, I write this blog, create <things/> in code, architect <things/> and also an early adopter of <things/>.",
+  "icons": [
+    {"src":"/favicon-512x.png","sizes":"512x512","type":"image/png"},
+    {"src":"/favicon-32x.png","sizes":"32x32","type":"image/png"}
+  ],
+  "start_url": "https://baird.rocks",
+  "theme_color":"#1a202c",
+  "background_color":"#434190",
+  "display":"standalone"
+}

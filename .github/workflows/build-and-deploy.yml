@@ -1,0 +1,46 @@
+name: Azure Static Website CI/CD
+
+on: 
+  push: 
+    branches: 
+      - master 
+  pull_request: 
+    types: [opened, synchronize, reopened, closed] 
+    branches: 
+      - master 
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: 12.x
+
+    - name: NPM install
+      run: npm ci
+      working-directory: ./src
+
+    - name: Build
+      run: npm run build
+      working-directory: ./src
+
+    - name: Export
+      run: npm run export
+      working-directory: ./src
+
+    - name: Azure Static Website
+      uses: tibor19/static-website-deploy@v1
+      with:
+        connection-string: ${{ secrets.CONNECTION_STRING }}
+        folder: ./src/.out
+        blob-container-name: '$web'
+        public-access-policy: Blob
+        enabled-static-website: true
+        index-file: index.html
+        error-file: 404/index.html
+        remove-existing-files: true
