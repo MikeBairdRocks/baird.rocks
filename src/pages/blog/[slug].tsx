@@ -1,6 +1,6 @@
+import ReactMarkdown from "react-markdown";
 import Date from "../../components/Date";
 import React, {useEffect} from "react";
-import ReactMarkdown from "react-markdown";
 import {IPost} from "../../common/blog/IPost";
 import {HeroSplash, Layout} from "../../components/containers";
 import "../../common/StringExtensions";
@@ -9,7 +9,6 @@ import Meta from "../../components/Meta";
 import Prism from "prismjs";
 import "prismjs/components/prism-csharp";
 import Container from "../../components/containers/Container";
-
 
 type PostProps = {
   post: IPost
@@ -24,7 +23,7 @@ const Post: React.FunctionComponent<PostProps> = ({ post }) => {
     <Layout navbarTransparent={true}>
       <Meta title={post.title} description={post.description} url={post.slug} image={post.image} />
 
-      <HeroSplash image={post.image} minHeight="50vh" divider={{color: "text-gray-900", height: 75}}>
+      <HeroSplash label={post.title} image={post.image} minHeight="50vh" divider={{color: "text-gray-900", height: 75}}>
         <h1 className="text-white font-semibold text-5xl">
           {post.title}
         </h1>

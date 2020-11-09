@@ -1,15 +1,27 @@
+const withPlugins = require('next-compose-plugins');
+
 const withPWA = require('next-pwa');
 const runtimeCaching = require('next-pwa/cache');
 
 const nextConfig = {
   pwa: {
+    disable: process.env.NODE_ENV === 'development',
+    register: true,
     dest: 'public',
     runtimeCaching,
   },
 
-  target: 'serverless',
+  //target: 'serverless',
   reactStrictMode: true,
   trailingSlash: true,
+
+  images: {
+    deviceSizes: [640, 768, 1024, 1280],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    domains: [],
+    path: '/_next/image',
+    loader: 'default'
+  },
 
   async redirects() {
     return [
@@ -27,4 +39,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withPWA(nextConfig);
+module.exports = withPlugins([withPWA], nextConfig);

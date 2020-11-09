@@ -17,7 +17,7 @@ const Home: NextPage<HomeProps> = (props) => {
     <Layout navbarTransparent={true}>
       <Meta title="Home" />
 
-      <HeroSplash image="/images/splash.jpg" minHeight="60vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-900"}}>
+      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="60vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-900"}}>
         <h1 className="text-white font-semibold text-5xl">
           Hi, I'm {OWNER}.
         </h1>

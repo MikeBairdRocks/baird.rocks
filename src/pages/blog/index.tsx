@@ -14,7 +14,7 @@ const Blog: React.FunctionComponent<BlogProps> = ({posts}) => {
     <Layout navbarTransparent={true}>
       <Meta title="Blog" />
 
-      <HeroSplash image="/images/splash.jpg" minHeight="40vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-900"}}>
+      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="40vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-900"}}>
         <h1 className="text-white font-semibold text-5xl">Blog</h1>
       </HeroSplash>
 

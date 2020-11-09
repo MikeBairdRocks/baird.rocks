@@ -2,7 +2,7 @@
 title: "Writing clean code"
 date: "2019-10-23"
 description: "We all started out programming somewhere. Whether you are a self-taught developer starting out, a computer science major or a 20 year veteran, you all know that even the bad/unreadable code works."
-image: "https://images.unsplash.com/photo-1516981879613-9f5da904015f?ixlib=rb-0.3.5&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjExNzczfQ&s=82fd8dd969c6d3fc1e39a95ff3e7c843"
+image: "/images/legos.jpg"
 tags:
   - cleancode
 ---

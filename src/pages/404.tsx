@@ -14,7 +14,7 @@ const _404: React.FunctionComponent = () => {
     <Layout navbarTransparent={true}>
       <Meta title="Not Found" />
 
-      <HeroSplash hideDivider={true} image="https://images.unsplash.com/photo-1500930540495-e92875696a16?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1080&q=80">
+      <HeroSplash label="Compass" hideDivider={true} image="/images/compass.webp">
         <h1 className="text-white font-semibold text-5xl">
           <FontAwesomeIcon icon={faExclamationTriangle} /> 404 - Page Not Found
         </h1>

@@ -7,7 +7,8 @@ import React from "react";
 type HeroSplashProps = {
   minHeight?: string
   image: string
-  opacity?: Opacity,
+  label: string
+  opacity?: Opacity
   hideDivider?: boolean
   divider?: {
     height: number
@@ -24,7 +25,7 @@ const HeroSplash: React.FunctionComponent<HeroSplashProps> = (props) => {
 
   return (
     <div className="relative pt-16 pb-16 flex content-center items-center justify-center" style={{minHeight}}>
-      <HeroImage image={props.image} opacity={props.opacity} />
+      <HeroImage image={props.image} opacity={props.opacity} label={props.label} />
       <div className="container relative mx-auto">
         <div className="items-center flex flex-wrap">
           <div className="w-full px-4 ml-auto mr-auto text-center">

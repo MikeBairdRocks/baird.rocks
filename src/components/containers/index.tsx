@@ -4,6 +4,7 @@ import HeroImage from "./HeroImage";
 import HeroSplash from "./HeroSplash";
 import Layout from "./Layout";
 import Navbar from "./Navbar";
+import SocialIconLink from "./SocialIconLink";
 
 export {
   Divider,
@@ -11,5 +12,6 @@ export {
   HeroImage,
   HeroSplash,
   Layout,
-  Navbar
+  Navbar,
+  SocialIconLink
 };
