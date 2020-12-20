@@ -7,20 +7,14 @@ import {
   SOCIAL_USERNAME
 } from "../common/Constants";
 import {NextPage} from "next";
-import Meta from "../components/Meta";
 import Container from "../components/containers/Container";
 import Image from "next/image";
+import Page from "../components/containers/Page";
 
 const Contact: NextPage = () => {
   return (
-    <Layout navbarTransparent={true}>
-      <Meta title="Contact" />
-
-      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="40vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-300 dark:text-gray-900"}}>
-        <h1 className="text-white font-semibold text-5xl">Contact</h1>
-      </HeroSplash>
-
-      <section className="pb-20 bg-gray-300 dark:bg-gray-900">
+    <Page title="Contact" splash={{label: "Programmer's Laptop", image: "/images/splash.jpg", minHeight: "40vh"}}>
+      <section itemScope itemType="http://schema.org/Person">
         <div className="items-center justify-center flex relative mb-5">
           <Image
             itemProp="image"
@@ -31,7 +25,7 @@ const Contact: NextPage = () => {
             loading="eager"
             alt="Michael Baird" />
         </div>
-        <Container itemScope itemType="http://schema.org/Person">
+        <Container>
           <p>I'm usually pretty easy to get hold of, here's how I use different channels to communicate with people and how best to contact me.</p>
           <p>I get a huge amount of communications so this page lists the channels I use and how I like to use them. I'll usually respond to all legitimate comms, there's an outline down the bottom of what I probably won't respond to so please read that first.</p>
 
@@ -49,7 +43,7 @@ const Contact: NextPage = () => {
           <p>If your message doesn't explicitly look like it needs a response or it's vague or not clear what the purpose is, you may not hear back from me.</p>
         </Container>
       </section>
-    </Layout>
+    </Page>
   );
 };
 

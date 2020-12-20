@@ -3,8 +3,7 @@ import {Divider} from "./index";
 import {Opacity} from "../../common/Colors";
 import React from "react";
 
-
-type HeroSplashProps = {
+export type HeroSplashProps = {
   minHeight?: string
   image: string
   label: string

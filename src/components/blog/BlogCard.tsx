@@ -19,8 +19,8 @@ const BlogCard: React.FunctionComponent<BlogCardProps> = (props) => {
   const headTextColor = featured ? "text-white" : "text-gray-800 dark:text-white";
   const bodyTextColor = featured ? "text-white" : "text-gray-700 dark:text-gray-300";
   const timestampColor = featured ? "text-gray-400" : "text-gray-600 dark:text-gray-400";
-  const width = featured ? 800 : 400;
-  const height = featured ? 400 : 200;
+  const width = featured ? 600 : 400;
+  const height = featured ? 300 : 200;
 
   return (
     <BlogLink slug={props.post.slug}>
