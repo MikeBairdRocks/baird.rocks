@@ -1,6 +1,7 @@
-import React, {ReactElement, useEffect, useLayoutEffect, useState} from "react";
+import React, {ReactElement, useContext, useEffect, useLayoutEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
+import {ThemeContext} from "./Theme";
 
 type DarkToggleProps = {
   darkIcon?: string | ReactElement
@@ -9,45 +10,24 @@ type DarkToggleProps = {
   lightIconClass?: string
 };
 
-type DarkToggleState = {
-  isDark: boolean
-  content: ReactElement
-};
-
 const DarkToggle: React.FunctionComponent<DarkToggleProps> = (props) => {
-  const [state, setState] = useState<DarkToggleState>({isDark: true, content: <></>});
+  const [content, setContent] = useState<ReactElement>(<></>);
+  const {isDark, toggle} = useContext(ThemeContext);
 
   useLayoutEffect(() => {
-    applyTheme(state.isDark);
-  }, [state.isDark]);
+    setContent(getContent);
+  }, [isDark]);
 
-  const applyTheme = (isDark: boolean) => {
-    const content = getContent(isDark);
-    setState({isDark, content});
-    const theme = isDark ? "dark" : "light";
-
-    const root = document.getElementsByTagName("html")[0];
-    root.className = theme;
-  };
-
-  const getContent = (isDark: boolean): ReactElement => {
+  const getContent = (): ReactElement => {
     const defaultIconClass = "text-yellow-500";
     const darkIcon = props.darkIcon ?? <FontAwesomeIcon className={props.darkIconClass ?? defaultIconClass} icon={faMoon}/>;
     const lightIcon = props.lightIcon ?? <FontAwesomeIcon className={props.lightIconClass ?? defaultIconClass} icon={faSun}/>;
     const icon = isDark ? lightIcon : darkIcon;
-    const content = props.children ? <>{props.children} {icon}</> : <>{icon}</>;
-
-    return content;
-  };
-
-  const toggle = () => {
-    const isDark = !state.isDark;
-    const content = getContent(isDark);
-    setState({isDark, content});
+    return props.children ? <>{props.children} {icon}</> : <>{icon}</>;
   };
 
   return (
-    <button type="button" className="font-medium" onClick={toggle}>{state.content}</button>
+    <button type="button" className="font-medium" onClick={toggle}>{content}</button>
   );
 };
 

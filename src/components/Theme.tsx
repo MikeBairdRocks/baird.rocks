@@ -23,15 +23,14 @@ const ThemeProvider: React.FunctionComponent = (props) => {
     }
   );
 
-  const [isDark, setDark] = useState(false);
+  const [isDark, setDark] = useState(systemPrefersDark);
 
   useEffect(() => {
-    setDark(systemPrefersDark);
-    applyTheme();
-  }, [isDark, systemPrefersDark]);
+    applyTheme(isDark);
+  }, [isDark]);
 
-  const applyTheme = () => {
-    const theme = isDark ? "dark" : "light";
+  const applyTheme = (darkMode: boolean) => {
+    const theme = darkMode ? "dark" : "light";
 
     const root = document.getElementsByTagName("html")[0];
     root.className = theme;
