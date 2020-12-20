@@ -69,7 +69,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = (props) =>{
             <li className="flex items-center">
               <SocialIconLink color={socialClass} icon={faLinkedin} href={SOCIAL_LINKEDIN} text="LinkedIn" smallDeviceText={true} />
             </li>
-            <li className="flex items-center pl-10">
+            <li className="flex items-center pl-10 invisible lg:visible">
               <DarkToggle />
             </li>
           </ul>

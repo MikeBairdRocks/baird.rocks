@@ -2,34 +2,11 @@ import React from "react";
 import {Divider} from "./index";
 import Link from "next/link";
 import {CMS_NAME, SOCIAL_GITHUB, SOCIAL_LINKEDIN, SOCIAL_STACKOVERFLOW, SOCIAL_TWITTER} from "../../common/Constants";
-import {IconProp} from "@fortawesome/fontawesome-svg-core";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTwitter, faGithub, faStackOverflow, faLinkedin} from "@fortawesome/free-brands-svg-icons";
 import SocialIconLink from "./SocialIconLink";
 import DarkToggle from "../DarkToggle";
 
-type FooterProps = {
-
-};
-
-type FooterButtonProps = {
-  color: string
-  icon: IconProp
-  url: string
-  text: string
-};
-
-const FooterButton: React.FunctionComponent<FooterButtonProps> = (props) => {
-  return (
-    <a href={props.url}
-       aria-label={props.text}
-       className={`${props.color} text-2xl font-normal items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2 p-3`}>
-      <FontAwesomeIcon icon={props.icon} />
-    </a>
-  );
-};
-
-const Footer: React.FunctionComponent<FooterProps> = (props) => {
+const Footer: React.FunctionComponent = (props) => {
   const textClass = "text-gray-300 dark:text-gray-900";
   const linkClass = "text-gray-300 hover:text-gray-400 dark:text-gray-700 dark:hover:text-gray-900 font-semibold block py-1 pb-2 text-md";
   const headerClass = `${textClass} block uppercase text-md font-bold mb-2`;
@@ -85,7 +62,7 @@ const Footer: React.FunctionComponent<FooterProps> = (props) => {
                     </Link>
                   </li>
                   <li>
-                    <DarkToggle lightIconClass="text-black"><span className="text-gray-300 hover:text-gray-400 dark:text-gray-700 dark:hover:text-gray-900 font-semibold">Theme</span></DarkToggle>
+                    <DarkToggle lightIconClass="text-black" className="font-semibold py-1 pb-2"><span className="text-gray-300 hover:text-gray-400 dark:text-gray-700 dark:hover:text-gray-900">Theme</span></DarkToggle>
                   </li>
                 </ul>
               </div>

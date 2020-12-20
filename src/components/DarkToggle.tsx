@@ -1,14 +1,15 @@
-import React, {ReactElement, useContext, useEffect, useLayoutEffect, useState} from "react";
+import React, {ReactElement, ReactHTMLElement, useContext, useEffect, useLayoutEffect, useState} from "react";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faMoon, faSun} from "@fortawesome/free-solid-svg-icons";
 import {ThemeContext} from "./Theme";
 
-type DarkToggleProps = {
-  darkIcon?: string | ReactElement
-  lightIcon?: string | ReactElement
-  darkIconClass?: string
-  lightIconClass?: string
-};
+interface DarkToggleProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
+  className?: string;
+  darkIcon?: string | ReactElement;
+  lightIcon?: string | ReactElement;
+  darkIconClass?: string;
+  lightIconClass?: string;
+}
 
 const DarkToggle: React.FunctionComponent<DarkToggleProps> = (props) => {
   const [content, setContent] = useState<ReactElement>(<></>);
@@ -26,8 +27,10 @@ const DarkToggle: React.FunctionComponent<DarkToggleProps> = (props) => {
     return props.children ? <>{props.children} {icon}</> : <>{icon}</>;
   };
 
+  const className = props.className ? `font-medium ${props.className}` : "font-medium";
+
   return (
-    <button type="button" className="font-medium" aria-label="Toggle Theme" onClick={toggle}>{content}</button>
+    <button type="button" className={className} aria-label="Toggle Theme" onClick={toggle}>{content}</button>
   );
 };
 
