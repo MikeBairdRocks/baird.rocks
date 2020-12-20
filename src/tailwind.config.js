@@ -29,9 +29,6 @@ module.exports = {
       mono: ['Menlo', 'Monaco', 'Consolas', '"Liberation Mono"', '"Courier New"', 'monospace']
     },
     extend: {
-      // screens: {
-      //   'dark-mode': {raw: '(prefers-color-scheme: dark)'},
-      // },
       typography: (theme) => ({
         DEFAULT: {
           css: {
@@ -44,7 +41,7 @@ module.exports = {
             },
             blockquote: {
               borderLeftColor: theme('colors.indigo.800'),
-              color: theme('colors.gray.500')
+              color: theme('colors.gray.500'),
             },
           }
         },
