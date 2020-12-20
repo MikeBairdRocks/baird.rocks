@@ -14,11 +14,11 @@ const Blog: React.FunctionComponent<BlogProps> = ({posts}) => {
     <Layout navbarTransparent={true}>
       <Meta title="Blog" />
 
-      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="40vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-900"}}>
+      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="40vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-300 dark:text-gray-900"}}>
         <h1 className="text-white font-semibold text-5xl">Blog</h1>
       </HeroSplash>
 
-      <section className="pb-20 bg-gray-900">
+      <section className="pb-20 bg-gray-300 dark:bg-gray-900">
         <div className="container mx-auto px-4 py-4">
           <div className="flex flex-wrap">
             {posts.map((post: IPost) => (

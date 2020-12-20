@@ -24,11 +24,6 @@ const SocialIconLink: React.FunctionComponent<SocialIconLinkProps> = (props) => 
       <span className={iconClass}><FontAwesomeIcon icon={props.icon} size={size} /></span>
       {smallDeviceText ? <span className="lg:hidden inline-block ml-2">{text}</span> : <></>}
     </a>
-    //
-    // <Link {...props} href={props.href} passHref>
-    //   <span className={iconClass}><FontAwesomeIcon icon={props.icon} size={size} /></span>
-    //   <span className="lg:hidden inline-block ml-2">{text}</span>
-    // </Link>
   );
 };
 

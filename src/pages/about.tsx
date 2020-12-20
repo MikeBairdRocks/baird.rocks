@@ -10,15 +10,15 @@ const About: NextPage = () => {
     <Layout navbarTransparent={true}>
       <Meta title="About" />
 
-      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="40vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-900"}}>
+      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="40vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-300 dark:text-gray-900"}}>
         <h1 className="text-white font-semibold text-5xl">About</h1>
       </HeroSplash>
 
-      <section itemScope itemType="http://schema.org/Person" className="pb-20 bg-gray-900">
+      <section itemScope itemType="http://schema.org/Person" className="pb-20 bg-gray-300 dark:bg-gray-900">
         <div className="items-center justify-center flex relative mb-5">
           <Image
             itemProp="image"
-            className="rounded-full justify-center shadow-xl"
+            className="rounded-full justify-center shadow-lg"
             src="/images/michael-baird.jpg"
             width="300"
             height="300"

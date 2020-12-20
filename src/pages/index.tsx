@@ -17,7 +17,7 @@ const Home: NextPage<HomeProps> = (props) => {
     <Layout navbarTransparent={true}>
       <Meta title="Home" />
 
-      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="60vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-900"}}>
+      <HeroSplash label="Programmer's Laptop" image="/images/splash.jpg" minHeight="60vh" opacity="opacity-50" divider={{height: 75, color: "text-gray-300 dark:text-gray-900"}}>
         <h1 className="text-white font-semibold text-5xl">
           Hi, I'm {OWNER}.
         </h1>
@@ -26,7 +26,7 @@ const Home: NextPage<HomeProps> = (props) => {
         </p>
       </HeroSplash>
 
-      <section className="pb-20 bg-gray-900 -mt-24">
+      <section className="pb-20 bg-gray-300 dark:bg-gray-900 -mt-24">
         <div className="container mx-auto px-4">
           <div className="flex flex-wrap">
             <BlogCard featured={true} post={props.featured} descriptionLimit={50}  />

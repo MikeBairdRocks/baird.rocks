@@ -14,8 +14,11 @@ type BlogCardProps = {
 
 const BlogCard: React.FunctionComponent<BlogCardProps> = (props) => {
   const featured = props.featured ?? false;
-  const bgColor = featured ? "bg-indigo-800" : "bg-gray-800";
-  const dividerColor = featured ? "text-indigo-800" : "text-gray-800";
+  const bgColor = featured ? "bg-indigo-800" : "bg-gray-200 dark:bg-gray-800";
+  const dividerColor = featured ? "text-indigo-800" : "text-gray-200 dark:text-gray-800";
+  const headTextColor = featured ? "text-white" : "text-gray-800 dark:text-white";
+  const bodyTextColor = featured ? "text-white" : "text-gray-700 dark:text-gray-300";
+  const timestampColor = featured ? "text-gray-400" : "text-gray-600 dark:text-gray-400";
   const width = featured ? 800 : 400;
   const height = featured ? 400 : 200;
 
@@ -36,13 +39,13 @@ const BlogCard: React.FunctionComponent<BlogCardProps> = (props) => {
 
           <blockquote className="relative p-8 mb-4">
             <Divider height={100} color={dividerColor} position="top" direction="right" />
-            <h1 className="text-xl font-bold text-white">
+            <h1 className={`text-xl font-bold ${headTextColor}`}>
               {props.post.title.truncate(5)}
             </h1>
-            <p className="text-md font-light mt-2 text-gray-300">
+            <p className={`text-md font-light mt-2 ${bodyTextColor}`}>
               {props.post.description.truncate(props.descriptionLimit ?? 20)}
             </p>
-            <p className="text-sm font-bold mt-5 text-gray-400">
+            <p className={`text-sm font-bold mt-5 ${timestampColor}`}>
               <Date value={props.post.date} /> • {props.post.content.readingTime()}
             </p>
           </blockquote>

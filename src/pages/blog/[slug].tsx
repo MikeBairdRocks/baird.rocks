@@ -23,7 +23,7 @@ const Post: React.FunctionComponent<PostProps> = ({ post }) => {
     <Layout navbarTransparent={true}>
       <Meta title={post.title} description={post.description} url={post.slug} image={post.image} />
 
-      <HeroSplash label={post.title} image={post.image} minHeight="50vh" divider={{color: "text-gray-900", height: 75}}>
+      <HeroSplash label={post.title} image={post.image} minHeight="50vh" divider={{color: "text-gray-300 dark:text-gray-900", height: 75}}>
         <h1 className="text-white font-semibold text-5xl">
           {post.title}
         </h1>
@@ -32,7 +32,7 @@ const Post: React.FunctionComponent<PostProps> = ({ post }) => {
         </p>
       </HeroSplash>
 
-      <article className="pb-20 bg-gray-900">
+      <article className="pb-20 bg-gray-300 dark:bg-gray-900">
         <Container>
           <ReactMarkdown escapeHtml={false} source={post.content} />
         </Container>

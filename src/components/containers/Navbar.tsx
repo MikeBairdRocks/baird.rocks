@@ -5,6 +5,7 @@ import Link from "next/link";
 import {faGithub, faLinkedin, faStackOverflow, faTwitter} from "@fortawesome/free-brands-svg-icons";
 import {CMS_NAME, SOCIAL_GITHUB, SOCIAL_LINKEDIN, SOCIAL_STACKOVERFLOW, SOCIAL_TWITTER} from "../../common/Constants";
 import SocialIconLink from "./SocialIconLink";
+import DarkToggle from "../DarkToggle";
 
 type NavbarProps = {
   transparent?: boolean
@@ -35,7 +36,7 @@ const Navbar: React.FunctionComponent<NavbarProps> = (props) =>{
       <div className="container px-4 mx-auto flex flex-wrap items-center justify-between">
         <div className="w-full relative flex justify-between lg:w-auto lg:static lg:block lg:justify-start">
           <Link href="/" passHref>
-            <a className={`${baseLinkClass} text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase`}>{CMS_NAME}</a>
+            <a className={`${baseLinkClass} text-lg font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase`}>{CMS_NAME}</a>
           </Link>
           <button className="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
                   type="button"
@@ -67,6 +68,9 @@ const Navbar: React.FunctionComponent<NavbarProps> = (props) =>{
             </li>
             <li className="flex items-center">
               <SocialIconLink color={socialClass} icon={faLinkedin} href={SOCIAL_LINKEDIN} text="LinkedIn" smallDeviceText={true} />
+            </li>
+            <li className="flex items-center pl-10">
+              <DarkToggle />
             </li>
           </ul>
         </div>
