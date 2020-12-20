@@ -27,7 +27,7 @@ const DarkToggle: React.FunctionComponent<DarkToggleProps> = (props) => {
   };
 
   return (
-    <button type="button" className="font-medium" onClick={toggle}>{content}</button>
+    <button type="button" className="font-medium" aria-label="Toggle Theme" onClick={toggle}>{content}</button>
   );
 };
 
