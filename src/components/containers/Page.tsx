@@ -12,7 +12,7 @@ interface PageProps {
 }
 
 const Page: React.FunctionComponent<PageProps> = (props) => {
-  const darkColor = "gray-800";
+  const darkColor = "gray-900";
   const lightColor = "gray-300";
   const splashTitle = props.splashTitle ?? props.title;
   const Secondary = () => {

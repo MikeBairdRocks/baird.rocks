@@ -4,7 +4,7 @@ import {IPost} from "../common/blog/IPost";
 import BlogCard from "../components/blog/BlogCard";
 import {NextPage} from "next";
 import {getAllPosts} from "../common/blog/BlogRepository";
-import Page from "../components/containers/Page";
+import {Page} from "../components/containers";
 
 type HomeProps = {
   lastPosts: IPost[]

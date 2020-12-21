@@ -1,5 +1,5 @@
 import React from "react";
-import {HeroSplash, Layout} from "../components/containers";
+import {Page} from "../components/containers";
 import {
   EMAIL,
   SOCIAL_LINKEDIN,
@@ -9,7 +9,6 @@ import {
 import {NextPage} from "next";
 import Container from "../components/containers/Container";
 import Image from "next/image";
-import Page from "../components/containers/Page";
 
 const Contact: NextPage = () => {
   return (
@@ -19,7 +18,7 @@ const Contact: NextPage = () => {
           <Image
             itemProp="image"
             className="rounded-full justify-center shadow-lg"
-            src="/images/michael-baird.jpg"
+            src="/images/michael-baird2.jpg"
             width="300"
             height="300"
             loading="eager"
