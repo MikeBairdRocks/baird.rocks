@@ -16,8 +16,8 @@ const nextConfig = {
   trailingSlash: true,
 
   images: {
-    deviceSizes: [640, 768, 1024, 1280],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    deviceSizes: [640, 768, 1024, 1280, 1920, 2048],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384, 512],
     domains: [],
     path: '/_next/image',
     loader: 'default'

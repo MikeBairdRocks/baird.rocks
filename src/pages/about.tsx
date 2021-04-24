@@ -7,15 +7,15 @@ import Page from "../components/containers/Page";
 const About: NextPage = () => {
   return (
     <Page title="About" splash={{label: "Programmer's Laptop", image: "/images/splash.jpg", minHeight: "40vh"}}>
-      <section itemScope itemType="http://schema.org/Person">
+      <section itemScope itemType="https://schema.org/Person">
         <div className="items-center justify-center flex relative mb-5">
           <Image
             itemProp="image"
             className="rounded-full justify-center shadow-lg"
             src="/images/michael-baird2.jpg"
-            width="300"
-            height="300"
-            loading="eager"
+            width="250"
+            height="250"
+            layout="fixed"
             alt="Michael Baird" />
         </div>
 

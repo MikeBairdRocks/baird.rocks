@@ -15,7 +15,7 @@ const DarkToggle: React.FunctionComponent<DarkToggleProps> = (props) => {
   const [content, setContent] = useState<ReactElement>(<></>);
   const {isDark, toggle} = useContext(ThemeContext);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     setContent(getContent);
   }, [isDark]);
 
