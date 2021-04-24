@@ -16,6 +16,7 @@ const HeroImage: React.FunctionComponent<HeroImageProps> = (props) => {
         className="object-cover"
         src={props.image}
         alt={props.label}
+        objectFit="cover"
         loading="eager"
         layout="fill" />
       <span className={`w-full h-full absolute ${opacity} bg-black`}></span>
