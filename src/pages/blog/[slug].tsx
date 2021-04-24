@@ -34,7 +34,7 @@ const Post: React.FunctionComponent<PostProps> = ({ post }) => {
 
       <article className="pb-20 bg-gray-300 dark:bg-gray-900">
         <Container>
-          <ReactMarkdown escapeHtml={false} source={post.content} />
+          <ReactMarkdown skipHtml={false} children={post.content} />
         </Container>
       </article>
     </Layout>
