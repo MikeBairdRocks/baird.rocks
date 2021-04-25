@@ -13,7 +13,7 @@ type TagPostsProps = {
 
 const TagPosts: React.FunctionComponent<TagPostsProps> = (props) => {
   return (
-    <Page title={props.tag} splashSecondary={`A collection of ${props.posts.length} posts.`} splash={{label: "Programmer's Laptop", image: "/images/splash.jpg", minHeight: "40vh", opacity: "opacity-50"}}>
+    <Page title={`#${props.tag}`} splashSecondary={`A collection of ${props.posts.length} posts.`} splash={{label: "Programmer's Laptop", image: "/images/splash.jpg", minHeight: "40vh", opacity: "opacity-50"}}>
       <BlogList posts={props.posts} />
     </Page>
   );

@@ -34,7 +34,7 @@ const Post: React.FunctionComponent<PostProps> = ({ post }) => {
         <p className="text-sm font-bold mt-5 text-gray-400">
           <Date value={post.date} /> • {post.content.readingTime()}
         </p>
-        <p className="mt-5 text-gray-500">
+        <p className="mt-5 text-indigo-500 hover:text-indigo-600">
           <TagLinks tags={post.tags} />
         </p>
       </HeroSplash>

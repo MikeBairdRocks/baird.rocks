@@ -11,7 +11,7 @@ const nextConfig = {
     runtimeCaching,
   },
 
-  //target: 'serverless',
+  poweredByHeader: false,
   reactStrictMode: true,
   trailingSlash: true,
 
