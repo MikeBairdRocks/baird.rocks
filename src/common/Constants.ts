@@ -6,8 +6,7 @@ export const CMS_URL = "https://baird.rocks";
 
 export const META_LOCALE = "en_US";
 export const META_TITLE = `${CMS_NAME}`;
-const things = "<things />";
-export const META_DESCRIPTION = `I write this blog, create ${things} in code, architect ${things} and also an early adopter of ${things}.`;
+export const META_DESCRIPTION = "I’m an experienced software developer and I like my music loud.";
 
 export const SOCIAL_USERNAME = "MikeBairdRocks";
 export const SOCIAL_TWITTER = `https://twitter.com/${SOCIAL_USERNAME}`;

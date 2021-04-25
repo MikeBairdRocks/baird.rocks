@@ -21,7 +21,7 @@ const About: NextPage = () => {
 
         <Container>
           <p>I'm <span itemProp="name">Michael Baird</span>, a <span itemProp="jobTitle">Software Architect</span>. I
-            live with my wife, two cats, dog, five children, and a ton of gadgets. I blog about technology, gadgets,
+            live with my wife, one cat, dog, five children, and a ton of gadgets. I blog about technology, gadgets,
             code, the web, and things I've researched that aren't well documented, then document my research with a
             public blog post.</p>
 

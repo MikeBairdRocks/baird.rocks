@@ -9,9 +9,21 @@ import Meta from "../../components/Meta";
 import Prism from "prismjs";
 import "prismjs/components/prism-csharp";
 import Container from "../../components/containers/Container";
+import Link from "next/link";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faTag} from "@fortawesome/free-solid-svg-icons";
 
 type PostProps = {
   post: IPost
+};
+
+const TagLinks: React.FunctionComponent<PostProps> = ({post}) => {
+
+  return <>
+    {post.tags.map((tag, index) => {
+      return <><Link key={tag} href={`/tag/${tag}`}><FontAwesomeIcon icon={faTag} size="sm" /> {tag}</Link> </>;
+    })}
+  </>;
 };
 
 const Post: React.FunctionComponent<PostProps> = ({ post }) => {
@@ -29,6 +41,9 @@ const Post: React.FunctionComponent<PostProps> = ({ post }) => {
         </h1>
         <p className="text-sm font-bold mt-5 text-gray-400">
           <Date value={post.date} /> • {post.content.readingTime()}
+        </p>
+        <p className="mt-5 text-gray-500">
+           <TagLinks post={post} />
         </p>
       </HeroSplash>
 

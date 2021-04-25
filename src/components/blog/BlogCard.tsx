@@ -5,6 +5,9 @@ import "../../common/StringExtensions";
 import BlogLink from "./BlogLink";
 import {Divider} from "../containers";
 import Image from "next/image";
+import Link from "next/link";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import {faTag} from "@fortawesome/free-solid-svg-icons";
 
 type BlogCardProps = {
   post: IPost
@@ -18,7 +21,8 @@ const BlogCard: React.FunctionComponent<BlogCardProps> = (props) => {
   const dividerColor = featured ? "text-indigo-800" : "text-gray-200 dark:text-gray-800";
   const headTextColor = featured ? "text-white" : "text-gray-800 dark:text-white";
   const bodyTextColor = featured ? "text-white" : "text-gray-700 dark:text-gray-300";
-  const timestampColor = featured ? "text-gray-400" : "text-gray-600 dark:text-gray-400";
+  const timestampColor = featured ? "text-gray-300" : "text-gray-600 dark:text-gray-400";
+  const tagColor = featured ? "text-indigo-300" : "text-indigo-500 dark:text-indigo-400";
   const width = featured ? 600 : 400;
   const height = featured ? 300 : 200;
 
@@ -37,17 +41,21 @@ const BlogCard: React.FunctionComponent<BlogCardProps> = (props) => {
             className="w-full h-56 object-cover align-middle rounded-t-lg"
           />
 
-          <blockquote className="relative p-8 mb-4">
+          <blockquote className="relative p-4 mb-4">
             <Divider height={100} color={dividerColor} position="top" direction="right" />
             <h1 className={`text-xl font-bold ${headTextColor}`}>
               {props.post.title.truncate(5)}
             </h1>
-            <p className={`text-md font-light mt-2 ${bodyTextColor}`}>
+            <div className={`text-md font-light mt-2 ${bodyTextColor}`}>
               {props.post.description.truncate(props.descriptionLimit ?? 20)}
-            </p>
-            <p className={`text-sm font-bold mt-5 ${timestampColor}`}>
+            </div>
+            <div className={`text-sm font-bold mt-4 ${timestampColor}`}>
               <Date value={props.post.date} /> • {props.post.content.readingTime()}
-            </p>
+            </div>
+            <div className={`text-sm mt-5 ${tagColor}`}>
+              {props.post.tags.map(tag => <span className="pr-2"><Link key={tag} href={`/tag/${tag}`}>{`#${tag}`}</Link></span>
+              )}
+            </div>
           </blockquote>
         </div>
       </a>

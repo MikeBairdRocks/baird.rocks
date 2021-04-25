@@ -3,6 +3,7 @@ import path from "path";
 import matter from "gray-matter";
 import {IPost} from "./IPost";
 import {CONTENT_FOLDER} from "../Constants";
+import {ITag} from "./ITag";
 
 const postsDirectory = path.join(process.cwd(), `${CONTENT_FOLDER}/blog`);
 
@@ -34,6 +35,32 @@ export const getAllPosts = (): IPost[] => {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
+  return posts;
+};
+
+export const getAllTags = (): ITag[] => {
+  const slugs = getPostSlugs();
+  const tags = slugs
+    .map((slug) => getPostBySlug(slug))
+    .flatMap(post => {
+      return post.tags.map(t => {
+        return {
+          name: t,
+          slug: `/tag/${t.toLowerCase()}`
+        } as ITag;
+      });
+    });
+
+  return tags;
+};
+
+export const getAllPostsByTag = (tag: string): IPost[] => {
+  const slugs = getPostSlugs();
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug))
+    .filter(post => post.tags.includes(tag))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1));
   return posts;
