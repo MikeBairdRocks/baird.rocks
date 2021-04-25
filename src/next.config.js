@@ -11,6 +11,7 @@ const nextConfig = {
     runtimeCaching,
   },
 
+  productionBrowserSourceMaps: true,
   poweredByHeader: false,
   reactStrictMode: true,
   trailingSlash: true,
