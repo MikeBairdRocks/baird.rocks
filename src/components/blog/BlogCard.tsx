@@ -38,7 +38,8 @@ const BlogCard: React.FunctionComponent<BlogCardProps> = (props) => {
             src={props.post.image}
             width={width}
             height={height}
-            loading="lazy"
+            loading="eager"
+            objectFit="cover"
             className="w-full h-56 object-cover align-middle rounded-t-lg"
           />
 
