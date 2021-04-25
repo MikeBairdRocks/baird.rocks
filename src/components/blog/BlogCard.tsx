@@ -23,7 +23,7 @@ const BlogCard: React.FunctionComponent<BlogCardProps> = (props) => {
   const headTextColor = featured ? "text-white" : "text-gray-800 dark:text-white";
   const bodyTextColor = featured ? "text-white" : "text-gray-700 dark:text-gray-300";
   const timestampColor = featured ? "text-gray-300" : "text-gray-600 dark:text-gray-400";
-  const tagColor = featured ? "text-indigo-200" : "text-indigo-500 dark:text-indigo-400";
+  const tagColor = featured ? "text-indigo-200" : "text-indigo-600 dark:text-indigo-500";
   const width = featured ? 600 : 400;
   const height = featured ? 300 : 200;
 
