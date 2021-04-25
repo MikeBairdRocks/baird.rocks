@@ -12,18 +12,10 @@ import Container from "../../components/containers/Container";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTag} from "@fortawesome/free-solid-svg-icons";
+import TagLinks from "../../components/blog/TagLinks";
 
 type PostProps = {
   post: IPost
-};
-
-const TagLinks: React.FunctionComponent<PostProps> = ({post}) => {
-
-  return <>
-    {post.tags.map((tag, index) => {
-      return <><Link key={tag} href={`/tag/${tag}`}><FontAwesomeIcon icon={faTag} size="sm" /> {tag}</Link> </>;
-    })}
-  </>;
 };
 
 const Post: React.FunctionComponent<PostProps> = ({ post }) => {
@@ -43,7 +35,7 @@ const Post: React.FunctionComponent<PostProps> = ({ post }) => {
           <Date value={post.date} /> • {post.content.readingTime()}
         </p>
         <p className="mt-5 text-gray-500">
-           <TagLinks post={post} />
+          <TagLinks tags={post.tags} />
         </p>
       </HeroSplash>
 

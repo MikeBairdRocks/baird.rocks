@@ -8,6 +8,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import {faTag} from "@fortawesome/free-solid-svg-icons";
+import TagLinks from "./TagLinks";
 
 type BlogCardProps = {
   post: IPost
@@ -53,8 +54,7 @@ const BlogCard: React.FunctionComponent<BlogCardProps> = (props) => {
               <Date value={props.post.date} /> • {props.post.content.readingTime()}
             </div>
             <div className={`text-sm mt-5 ${tagColor}`}>
-              {props.post.tags.map(tag => <span className="pr-2"><Link key={tag} href={`/tag/${tag}`}>{`#${tag}`}</Link></span>
-              )}
+              <TagLinks tags={props.post.tags} />
             </div>
           </blockquote>
         </div>
