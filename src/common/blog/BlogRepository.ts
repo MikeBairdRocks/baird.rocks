@@ -5,7 +5,7 @@ import {IPost} from "./IPost";
 import {CONTENT_FOLDER} from "../Constants";
 import {ITag} from "./ITag";
 
-const postsDirectory = path.join(process.cwd(), `${CONTENT_FOLDER}/blog`);
+const postsDirectory = `../${CONTENT_FOLDER}/blog`;
 
 export const getPostSlugs = () => {
   return fs.readdirSync(postsDirectory);

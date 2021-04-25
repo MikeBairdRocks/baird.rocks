@@ -8,7 +8,7 @@ type TagLinksProps = {
 const TagLinks: React.FunctionComponent<TagLinksProps> = (props) => {
   return (
     <>
-    {props.tags.map(tag => <span className="pr-2"><Link key={tag} href={`/tag/${tag}`}>{`#${tag}`}</Link></span>)}
+    {props.tags.map(tag => <span key={tag} className="pr-2"><Link href={`/tag/${tag}`}>{`#${tag}`}</Link></span>)}
     </>
   );
 };

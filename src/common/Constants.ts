@@ -14,5 +14,5 @@ export const SOCIAL_GITHUB = `https://github.com/${SOCIAL_USERNAME}`;
 export const SOCIAL_LINKEDIN = `https://linkedin.com/in/${SOCIAL_USERNAME}`;
 export const SOCIAL_STACKOVERFLOW = "https://stackoverflow.com/users/131076/michael-baird";
 
-export const CONTENT_FOLDER = ".content";
+export const CONTENT_FOLDER = "_content";
 
