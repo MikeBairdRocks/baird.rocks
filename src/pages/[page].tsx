@@ -1,4 +1,3 @@
-/*
 import {getAllPages, getPageBySlug} from "../common/page/PageRepository";
 import {IPage} from "../common/page/IPage";
 import React from "react";
@@ -52,4 +51,4 @@ export const getStaticPaths = async () => {
   };
 };
 
-export default DynamicPage;*/
+export default DynamicPage;
