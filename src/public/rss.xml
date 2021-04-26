@@ -4,16 +4,16 @@
         <title>Michael Baird</title>
         <link>https://baird.rocks</link>
         <description>I’m an experienced software developer, focusing on code quality.</description>
-        <lastBuildDate>Sun, 14 Jul 2013 05:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 26 Apr 2021 03:38:45 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://baird.rocks</generator>
         <language>en</language>
         <image>
             <title>Michael Baird</title>
-            <url>https://baird.rocks/image.png</url>
+            <url>https://baird.rocks/images/michael-baird2.jpg</url>
             <link>https://baird.rocks</link>
         </image>
-        <copyright>All rights reserved 2013, John Doe</copyright>
+        <copyright>All rights reserved 2021, Michael Baird</copyright>
         <atom:link href="https://baird.rocks/rss.xml" rel="self" type="application/rss+xml"/>
         <item>
             <title><![CDATA[Writing clean code]]></title>

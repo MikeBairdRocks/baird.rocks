@@ -53,7 +53,6 @@ const Navbar: React.FunctionComponent<NavbarProps> = (props) =>{
             <li className="flex items-center">
               <NavLink {...props} href="/blog" text="Blog">Blog</NavLink>
               <NavLink {...props} href="/about" text="About">About</NavLink>
-              <NavLink {...props} href="/contact" text="Contact">Contact</NavLink>
             </li>
           </ul>
           <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">

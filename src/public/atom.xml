@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://baird.rocks</id>
     <title>Michael Baird</title>
-    <updated>2013-07-14T05:00:00.000Z</updated>
+    <updated>2021-04-26T03:38:45.737Z</updated>
     <generator>https://baird.rocks</generator>
     <author>
         <name>Michael Baird</name>
@@ -12,9 +12,9 @@
     <link rel="alternate" href="https://baird.rocks"/>
     <link rel="self" href="https://baird.rocks/atom.xml"/>
     <subtitle>I’m an experienced software developer, focusing on code quality.</subtitle>
-    <logo>https://baird.rocks/image.png</logo>
+    <logo>https://baird.rocks/images/michael-baird2.jpg</logo>
     <icon>https://baird.rocks/favicon.ico</icon>
-    <rights>All rights reserved 2013, John Doe</rights>
+    <rights>All rights reserved 2021, Michael Baird</rights>
     <entry>
         <title type="html"><![CDATA[Writing clean code]]></title>
         <id>writing-clean-code</id>
