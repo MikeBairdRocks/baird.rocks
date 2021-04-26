@@ -18,13 +18,13 @@ export const getPostBySlug = (slug: string): IPost => {
 
   // Use gray-matter to parse the post metadata section
   const { data, content } = matter(fileContents);
-
+  console.log(content.toString());
   // Combine the data with the id and contentHtml
   return {
     slug: realSlug,
     date: data.date,
     title: data.title,
-    content,
+    content: content.toString(),
     image: data.image,
     description: data.description,
     tags: data.tags

@@ -1,10 +1,11 @@
 import React from "react";
-import {META_DESCRIPTION, OWNER} from "../common/Constants";
+import {META_DESCRIPTION, AUTHOR} from "../common/Constants";
 import {IPost} from "../common/blog/IPost";
 import BlogCard from "../components/blog/BlogCard";
 import {NextPage} from "next";
 import {getAllPosts} from "../common/blog/BlogRepository";
 import {Page} from "../components/containers";
+import generateFeeds from "../common/Feed";
 
 type HomeProps = {
   lastPosts: IPost[]
@@ -15,7 +16,7 @@ const Home: NextPage<HomeProps> = (props) => {
   return (
     <Page
       title="Home"
-      splashTitle={`Hi, I'm ${OWNER}.`}
+      splashTitle={`Hi, I'm ${AUTHOR}.`}
       splashSecondary={META_DESCRIPTION}
       splash={{label: "Programmer's Laptop", image: "/images/splash.jpg", minHeight: "60vh"}}
     >
@@ -42,6 +43,8 @@ const Home: NextPage<HomeProps> = (props) => {
 
 export const getStaticProps = async () => {
   const posts = getAllPosts();
+  generateFeeds(posts);
+
   const featured = posts[0];
 
   const postsMinusFeatured = posts.filter(x => x.slug !== featured.slug);

@@ -72,6 +72,11 @@ const Meta: React.FunctionComponent<MetaProps> = ({
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x.png" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x.png" />
       <link rel="manifest" href="/site.webmanifest" />
+      <link rel="canonical" href={CMS_URL} />
+
+      <link rel="alternate" type="application/rss+xml" title={`RSS Feed for ${CMS_URL}`} href="/rss.xml" />
+      <link rel="alternate" type="application/atom+xml" title={`RSS Feed for ${CMS_URL}`} href="/atom.xml" />
+      <link rel="alternate" type="application/feed+json" title={`RSS Feed for ${CMS_URL}`} href="/feed.json" />
     </Head>
   );
 };

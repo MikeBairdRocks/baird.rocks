@@ -9,9 +9,6 @@ import Meta from "../../components/Meta";
 import Prism from "prismjs";
 import "prismjs/components/prism-csharp";
 import Container from "../../components/containers/Container";
-import Link from "next/link";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
-import {faTag} from "@fortawesome/free-solid-svg-icons";
 import TagLinks from "../../components/blog/TagLinks";
 
 type PostProps = {

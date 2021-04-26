@@ -1,5 +1,9 @@
-export const OWNER = "Michael Baird";
+export const AUTHOR = "Michael Baird";
 export const EMAIL = "info at baird.rocks";
+
+export const FEED_ATOM = "atom.xml";
+export const FEED_RSS = "rss.xml";
+export const FEED_JSON = "feed.json";
 
 export const CMS_NAME = "Michael Baird";
 export const CMS_URL = "https://baird.rocks";
