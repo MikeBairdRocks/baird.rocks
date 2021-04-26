@@ -4,12 +4,11 @@ export default class MyDocument extends Document {
   render() {
     return (
       <Html lang="en">
-        <Head>
-          <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "08a32db1f41b465e9780f250c2eacb60"}'></script>
-        </Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
+          <script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token": "08a32db1f41b465e9780f250c2eacb60"}'></script>
         </body>
       </Html>
     );
